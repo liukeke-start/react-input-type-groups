@@ -7,7 +7,8 @@ export default class InputGroup extends React.Component {
             boxLength: [],
             numList: [],
             isFocus: false,
-            num: ''
+            num: '',
+            typetype:''
         };
         this.textChange = this.textChange.bind(this);
         this.inputFocus = this.inputFocus.bind(this);
@@ -49,7 +50,7 @@ export default class InputGroup extends React.Component {
     }
     render() {
         const { length, type } = this.props;
-        const { num, numList, isFocus, boxLength } = this.state;
+        const { num, numList, isFocus, boxLength,typetype } = this.state;
         return (
             <div >
                 {
@@ -60,6 +61,7 @@ export default class InputGroup extends React.Component {
                                 className="box-input"
                                 maxLength={length}
                                 value={num}
+                                type={typetype}
                                 onChange={this.textChange}
                                 onBlur={() => this.setState({ isFocus: false })}
                             />
@@ -81,6 +83,7 @@ export default class InputGroup extends React.Component {
                                 className="box-input"
                                 maxLength={length}
                                 value={num}
+                                type={typetype}
                                 onChange={this.textChange}
                                 onBlur={() => this.setState({ isFocus: false })}
                             />

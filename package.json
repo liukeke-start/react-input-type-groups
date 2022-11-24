@@ -1,7 +1,7 @@
 {
-  "name": "react-input-groups",
-  "version": "1.0.3",
-  "description": "React验证码输入框，仿支付宝微信密码输入框，仿钉钉摩拜短信验证码输入框",
+  "name": "react-input-type-groups",
+  "version": "1.0.0",
+  "description": "",
   "main": "lib/index.js",
   "files": [
     "build",

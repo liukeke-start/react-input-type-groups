@@ -1,4 +1,11 @@
-# react-input-groups
+<!--
+ * @Author: liukeke liukeke@diynova.com
+ * @Date: 2022-11-24 22:21:35
+ * @LastEditors: liukeke liukeke@diynova.com
+ * @LastEditTime: 2022-11-24 22:31:29
+ * @FilePath: /InputGroup/README.md
+-->
+# react-inpu-typet-groups
 
 - 仿支付宝微信密码输入框 钉钉验证码输入框
 
@@ -12,6 +19,7 @@
        1:type目前支持两种'line'和'box'
        2:length目前两种长度 4和6
        3:getValue获取组件返回值的方法
+       4:typeText密码
   #### 引入
 
    ```
