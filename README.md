@@ -6,7 +6,7 @@
 
   #### 安装
     ```
-    npm install react-input-groups;
+    npm install react-input-type-groups;
     ```
   #### api
        1:type目前支持两种'line'和'box'
