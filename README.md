@@ -4,26 +4,20 @@
 
 - 使用方法
 
-  #### 安装
-    ```
-    npm install react-input-type-groups;
-    ```
   #### api
        1:type目前支持两种'line'和'box'
        2:length目前两种长度 4和6
        3:getValue获取组件返回值的方法
-       4:typeText密码
   #### 引入
 
    ```
-    import InputGroup from 'react-input-groups';
-    import 'react-input-groups/lib/css/styles.css';
+    import InputGroup from 'react-input-type-groups';
+    import 'react-input-type-groups/lib/css/styles.css';
 
     export class Inputarea extends React.Component {
         constructor(props) {
             super(props);
             this.state = {
-
             };
             this.getValue = this.getValue.bind(this)
         }

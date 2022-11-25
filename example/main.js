@@ -24,6 +24,7 @@ export class Inputarea extends React.Component {
                 getValue={this.getValue}
                 length={4}
                 type={'box'}
+                typeText={'password'}
             />
           </div>
         );

@@ -8,20 +8,19 @@ export default class InputGroup extends React.Component {
             numList: [],
             isFocus: false,
             num: '',
-            typetype:''
         };
         this.textChange = this.textChange.bind(this);
         this.inputFocus = this.inputFocus.bind(this);
     }
     textChange(e) {
-        const value = e.target.value.replace(/[^\d]/g, '')
+        const value = e.target.value
         this.props.getValue(value)
         this.setState({
             num: value
         })
         setTimeout(() => {
             this.setState({
-                numList: this.state.num.split('')
+                numList: this.state.num.replace(/./g,'*')
             })
         }, 100);
     }
@@ -50,7 +49,7 @@ export default class InputGroup extends React.Component {
     }
     render() {
         const { length, type } = this.props;
-        const { num, numList, isFocus, boxLength,typetype } = this.state;
+        const { num, numList, isFocus, boxLength } = this.state;
         return (
             <div >
                 {
@@ -61,14 +60,16 @@ export default class InputGroup extends React.Component {
                                 className="box-input"
                                 maxLength={length}
                                 value={num}
-                                type={typetype}
                                 onChange={this.textChange}
                                 onBlur={() => this.setState({ isFocus: false })}
                             />
                             <div className="box-containers">
                                 {boxLength.map((item, index) => {
                                     return (
-                                        <div key={index} >{numList[item]}<span className="shake" style={{ display: item === numList.length && isFocus ? 'block' : 'none' }}>|</span> </div>
+                                        <div key={index} >
+                                            {numList[item]}
+                                            <span className="shake" style={{ display: item === numList.length && isFocus ? 'block' : 'none' }}>|</span> 
+                                        </div>
                                     )
                                 })}
                             </div>
@@ -83,14 +84,16 @@ export default class InputGroup extends React.Component {
                                 className="box-input"
                                 maxLength={length}
                                 value={num}
-                                type={typetype}
                                 onChange={this.textChange}
                                 onBlur={() => this.setState({ isFocus: false })}
                             />
                             <div className="box-container">
                                 {boxLength.map((item, index) => {
                                     return (
-                                        <div key={index} >{numList[item]}<span className="shake" style={{ display: item === numList.length && isFocus ? 'block' : 'none' }}>|</span> </div>
+                                        <div key={index} >
+                                            {(numList[item])}
+                                            <span className="shake" style={{ display: item === numList.length && isFocus ? 'block' : 'none' }}>|</span> 
+                                        </div>
                                     )
                                 })}
                             </div>
