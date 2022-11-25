@@ -11,9 +11,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlertConsole/InputGroup.git"
+    "url": "https://github.com/liukeke-start/react-input-type-groups"
   },
-  "homepage": "https://github.com/AlertConsole/InputGroup",
+  "homepage": "https://github.com/liukeke-start/react-input-type-groups",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --config ./build/webpack.dev.config.js --open --port 3000 --hot",
